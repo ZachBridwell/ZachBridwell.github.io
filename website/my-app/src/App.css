@@ -1,0 +1,24 @@
+#top-border {
+    display: flex;
+    width: stretch;
+    height: 65px;
+    max-width: 100%;
+    background-color: #66FCF1;
+    color: white;
+    align-items: center;
+    
+    justify-content: space-between;
+  }
+
+  #top-border a {
+    color:white;
+    text-decoration: none;
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+
+  .flexstart {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
