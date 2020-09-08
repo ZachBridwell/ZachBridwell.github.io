@@ -24,7 +24,9 @@ import {
 } from 'semantic-ui-react'
 
 function App() {
-
+  const styles = {
+    textDecorationLine: 'underline'
+  }
   return (
     <Segment.Group stacked>
     <Segment
@@ -93,12 +95,11 @@ function App() {
              <Header as='h3' id={'about'}style={{ fontSize: '2em' }}>
                About Me
              </Header>
-             <p style={{ fontSize: '1.33em' }}>
+             <p style={{ fontSize: '1.25em' }}>
                Purdue Universtiy Graduate 2020
              </p>
-             <Button as='a' size='large'>
-               Read More
-             </Button>
+             <p><b>Major:</b> Computer Science &nbsp;&nbsp;&nbsp;&nbsp; <b>Focus:</b> Software Engineering</p>
+             <p><b>Hobbies:</b> &nbsp;Novice golfer,&nbsp;  Avid sports spectator,&nbsp;  Life-long videogamer</p>
      
              <Divider
                as='h4'
@@ -112,24 +113,32 @@ function App() {
                Projects
              </Header>
               <List divided relaxed>
-                <List.Item>
+
+              <List.Item>
                   <List.Content>
-                    <List.Header as='a'>Syncopate Chat</List.Header>
-                    <List.Description as='a'>6 Person project making a chat application for Purdue students</List.Description>
+                    <List.Header >FLOG</List.Header>
+                    <List.Description>Current Project: Golf website allowing user to keep record of scores, club distances, and other useful features.</List.Description>
                   </List.Content>
                 </List.Item>
 
                 <List.Item>
                   <List.Content>
-                    <List.Header as='a'>TeamUp</List.Header>
-                    <List.Description as='a'>5 Person project providing an easy way for Purdue students to find team members for group projects</List.Description>
+                    <List.Header as='a' href= 'https://github.com/ZachBridwell/syncopate-front-end-react' target='_blank' >Syncopate Chat</List.Header>
+                    <List.Description>6 Person senior project using software engineering principles to create a chat application for Purdue students to send messgaes and media to friends and groups</List.Description>
                   </List.Content>
                 </List.Item>
 
                 <List.Item>
                   <List.Content>
-                    <List.Header as='a'>Fridge2Food</List.Header>
-                    <List.Description as='a'>6 Person team project giving users means to find recipes based on certain ingredients </List.Description>
+                    <List.Header as='a' href = "https://github.com/ZachBridwell/TeamUp" target='_blank'>TeamUp </List.Header>
+                    <List.Description>5 Person software engineering project providing an easy way for Purdue students to find team members for group projects</List.Description>
+                  </List.Content>
+                </List.Item>
+
+                <List.Item>
+                  <List.Content>
+                    <List.Header as='a' href= 'https://github.com/ZachBridwell/Fridge2Food' target='_blank'>Fridge2Food</List.Header>
+                    <List.Description>6 Person software enginnering project giving users means to find recipes based on certain ingredients</List.Description>
                   </List.Content>
                 </List.Item>
 
@@ -151,13 +160,14 @@ function App() {
                 <List>
                   <List.Item>
                     <List.Content>
-                      <List.Header>Operating Systems Research Project</List.Header>
+                      <List.Header>Operating Systems Research Project &nbsp;-&nbsp; Purdue University</List.Header>
                       <List.Description>
-                      Lorem ipsum, or lipsum as it is sometimes known, is dummy text used 
-                      in laying out print, graphic or web designs. The passage is attributed
-                      to an unknown typesetter in the 15th century who is thought to have 
-                      scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a
-                       type specimen book. It usually begins with:
+                        Beginning Summer of 2019, a partner and I were assigned by Purdue professor Douglas Comer to looking into ways to simplify the "flow" of
+                        Purdue's in house operating system, Xinu. Xinu is mainly used by computer science students in Purdue's operating systems
+                        class and has a very complex boot process due to each student running their own version of the operating system.
+                        Along with its complexity the school lab made use of a discontinued Intel Galileo single board computer to run each OS. 
+                        During the Summer and throughout my senior year we looked into ways to change the booting process and intergrate the Operating System
+                        to the newer Intel Up Board.
                       </List.Description>
                     </List.Content>
                   </List.Item>
@@ -178,17 +188,17 @@ function App() {
              <Container>
                <Grid divided inverted stackable>
                <Grid.Row>
-                <Grid.Column width={5}>
+                <Grid.Column width={6}>
                 <List bulleted>
                   <List.Item>
-                    <b>Languages</b>
+                    <b style={styles}>Languages &amp; Frameworks</b>
                     <List.List>
-                      <List.Item>C++ - Advanced</List.Item>
-                      <List.Item>React - Advanced</List.Item>
-                      <List.Item>Python - Intermediate</List.Item>
-                      <List.Item>Java  - Intermediate </List.Item>
-                      <List.Item>Django - Beginner </List.Item>
-                      <List.Item>HTML - Beginner</List.Item>
+                      <List.Item>C++ </List.Item>
+                      <List.Item>React </List.Item>
+                      <List.Item>Python </List.Item>
+                      <List.Item>Java  </List.Item>
+                      <List.Item>Django  </List.Item>
+                      <List.Item> Node.js </List.Item>
                     </List.List>
                   </List.Item>
                 </List>
@@ -197,7 +207,7 @@ function App() {
                 <Grid.Column width={5}>
                 <List bulleted>
                   <List.Item>
-                    <b>Tools</b>
+                    <b style={styles}>Tools</b>
                     <List.List>
                       <List.Item>Visual Studio</List.Item>
                       <List.Item>Git</List.Item>
@@ -211,7 +221,7 @@ function App() {
                 <Grid.Column width={5}>
                 <List bulleted>
                   <List.Item>
-                    <b>Operating Systems</b>
+                    <b style={styles}>Operating Systems</b>
                     <List.List>
                       <List.Item>MacOS</List.Item>
                       <List.Item>Linux</List.Item>
